@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ajout Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AjoutController" customModule="RepertoireD_entreprise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="164-mA-bMc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWF-z0-l8k">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="Xe8-jO-o5q"/>
+                                            <constraint firstAttribute="width" constant="375" id="bpX-v8-HwU"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-Qe-Bfa">
+                                        <rect key="frame" x="8" y="136" width="359" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gzG-ve-DGv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Vous ne trouvez pas votre entreprise?">
+                                            <color key="titleColor" red="0.99291795490000001" green="0.1253288984" blue="0.1149205938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ajouterEntrepriseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JlC-RX-upa"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TQe-3v-3Kx" customClass="ImageArrondie" customModule="RepertoireD_entreprise" customModuleProvider="target">
+                                        <rect key="frame" x="97.333333333333314" y="206" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="4oe-Nk-qRX"/>
+                                            <constraint firstAttribute="width" constant="180" id="s6z-jI-jJx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="6gE-ua-KVc">
+                                        <rect key="frame" x="20" y="406" width="335" height="180"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EfL-DP-Cqg">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKx-hl-Xgr">
+                                                <rect key="frame" x="0.0" y="50" width="335" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eco-mz-S2C">
+                                                <rect key="frame" x="0.0" y="100" width="335" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52d-e3-fG6">
+                                                <rect key="frame" x="0.0" y="150" width="335" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="2hv-z1-mxV"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iag-cW-aqy" customClass="BoutonArrondi" customModule="RepertoireD_entreprise" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="616" width="335" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ndH-eI-iWa"/>
+                                        </constraints>
+                                        <state key="normal" title="Ajouter la personne"/>
+                                        <connections>
+                                            <action selector="ajouterPersonneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYX-3s-2BQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iag-cW-aqy" firstAttribute="top" secondItem="6gE-ua-KVc" secondAttribute="bottom" constant="30" id="7Dn-B4-szF"/>
+                                    <constraint firstItem="6gE-ua-KVc" firstAttribute="top" secondItem="TQe-3v-3Kx" secondAttribute="bottom" constant="20" id="Aws-is-GuK"/>
+                                    <constraint firstAttribute="trailing" secondItem="iag-cW-aqy" secondAttribute="trailing" constant="20" id="D8G-3u-HKc"/>
+                                    <constraint firstAttribute="trailing" secondItem="AWF-z0-l8k" secondAttribute="trailing" id="IVo-Wm-fx7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZeY-Qe-Bfa" secondAttribute="trailing" constant="8" id="NOJ-FG-pfN"/>
+                                    <constraint firstItem="AWF-z0-l8k" firstAttribute="leading" secondItem="164-mA-bMc" secondAttribute="leading" id="Udi-2u-Y2G"/>
+                                    <constraint firstItem="TQe-3v-3Kx" firstAttribute="top" secondItem="ZeY-Qe-Bfa" secondAttribute="bottom" constant="20" id="Uhc-ry-h9Z"/>
+                                    <constraint firstItem="ZeY-Qe-Bfa" firstAttribute="top" secondItem="AWF-z0-l8k" secondAttribute="bottom" constant="8" id="bsu-NB-EFE"/>
+                                    <constraint firstItem="ZeY-Qe-Bfa" firstAttribute="leading" secondItem="164-mA-bMc" secondAttribute="leading" constant="8" id="cga-96-kKf"/>
+                                    <constraint firstAttribute="bottom" secondItem="iag-cW-aqy" secondAttribute="bottom" constant="50" id="hr9-4Y-rVI"/>
+                                    <constraint firstItem="TQe-3v-3Kx" firstAttribute="centerX" secondItem="164-mA-bMc" secondAttribute="centerX" id="ilO-Bf-nIZ"/>
+                                    <constraint firstItem="AWF-z0-l8k" firstAttribute="top" secondItem="164-mA-bMc" secondAttribute="top" id="kgW-bu-CTx"/>
+                                    <constraint firstAttribute="trailing" secondItem="6gE-ua-KVc" secondAttribute="trailing" constant="20" id="ltn-wg-BbW"/>
+                                    <constraint firstItem="iag-cW-aqy" firstAttribute="leading" secondItem="164-mA-bMc" secondAttribute="leading" constant="20" id="ni7-kg-8HR"/>
+                                    <constraint firstItem="6gE-ua-KVc" firstAttribute="leading" secondItem="164-mA-bMc" secondAttribute="leading" constant="20" id="uyV-rj-iaj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="164-mA-bMc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DYP-gS-X4h"/>
+                            <constraint firstItem="164-mA-bMc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ROc-gm-WGA"/>
+                            <constraint firstItem="164-mA-bMc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="p77-EI-0lm"/>
+                            <constraint firstItem="164-mA-bMc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="w13-Vl-yD9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ajouterEntrepise" destination="ZeY-Qe-Bfa" id="hDZ-m8-PrA"/>
+                        <outlet property="ajouterPersonneBouton" destination="iag-cW-aqy" id="zqB-Qh-eVy"/>
+                        <outlet property="contrainteDuBas" destination="w13-Vl-yD9" id="zcO-SH-Yb3"/>
+                        <outlet property="imageDeProfil" destination="TQe-3v-3Kx" id="CVl-4J-asN"/>
+                        <outlet property="largeurContrainte" destination="bpX-v8-HwU" id="NuJ-SQ-m7v"/>
+                        <outlet property="mailTextField" destination="52d-e3-fG6" id="P5L-Q7-tyd"/>
+                        <outlet property="nomTextField" destination="aKx-hl-Xgr" id="uUe-HI-I8r"/>
+                        <outlet property="pickerView" destination="AWF-z0-l8k" id="aLn-UT-lUp"/>
+                        <outlet property="prenomTextField" destination="EfL-DP-Cqg" id="QG7-6R-uc8"/>
+                        <outlet property="scroll" destination="164-mA-bMc" id="8rW-Bn-U0r"/>
+                        <outlet property="telTextField" destination="eco-mz-S2C" id="vdz-rf-3go"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
