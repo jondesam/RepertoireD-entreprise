@@ -17,6 +17,7 @@
 		95DC76E7212CB70A000AF4BC /* BoutonArrondi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC76E6212CB70A000AF4BC /* BoutonArrondi.swift */; };
 		95DC76E9212CD3E2000AF4BC /* PickerViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC76E8212CD3E2000AF4BC /* PickerViewExtension.swift */; };
 		95DC76EC212CD8DA000AF4BC /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC76EB212CD8DA000AF4BC /* Constantes.swift */; };
+		95DC76EE212DE7BF000AF4BC /* ImagePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC76ED212DE7BF000AF4BC /* ImagePickerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		95DC76E6212CB70A000AF4BC /* BoutonArrondi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonArrondi.swift; sourceTree = "<group>"; };
 		95DC76E8212CD3E2000AF4BC /* PickerViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewExtension.swift; sourceTree = "<group>"; };
 		95DC76EB212CD8DA000AF4BC /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
+		95DC76ED212DE7BF000AF4BC /* ImagePickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				954E9160212B5AC100C2E530 /* AjoutController.swift */,
 				95DC76E8212CD3E2000AF4BC /* PickerViewExtension.swift */,
+				95DC76ED212DE7BF000AF4BC /* ImagePickerExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				954E9148212B58D200C2E530 /* AppDelegate.swift in Sources */,
 				95DC76E5212CB4CE000AF4BC /* ImageArrondie.swift in Sources */,
 				95DC76E9212CD3E2000AF4BC /* PickerViewExtension.swift in Sources */,
+				95DC76EE212DE7BF000AF4BC /* ImagePickerExtension.swift in Sources */,
 				954E9161212B5AC100C2E530 /* AjoutController.swift in Sources */,
 				95DC76E7212CB70A000AF4BC /* BoutonArrondi.swift in Sources */,
 				95DC76EC212CD8DA000AF4BC /* Constantes.swift in Sources */,
