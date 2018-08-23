@@ -37,6 +37,8 @@ class AjoutController: UIViewController {
         super.viewDidLoad()
         miseEnPlaceImagePicker()
         miseEnPlacePicker()
+        miseEnPlaceTextField()
+        miseEnPlaceNotification()
         fectchEntreprises()
       
     }
