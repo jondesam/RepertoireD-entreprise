@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ajout Controller-->
+        <!--Accueil Controller-->
         <scene sceneID="EwW-Em-6nL">
             <objects>
-                <viewController id="7Ud-PU-uxr" customClass="AjoutController" customModule="RepertoireD_entreprise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Ud-PU-uxr" customClass="AccueilController" customModule="RepertoireD_entreprise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AZw-j5-9W3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +97,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="xkw-WQ-ZZT" id="TWG-NP-lKc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqh-zd-Y4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
