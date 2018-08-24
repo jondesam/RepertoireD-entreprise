@@ -12,21 +12,14 @@ import CoreData
 class AjoutController: UIViewController {
     
     @IBOutlet weak var scroll: UIScrollView!
-    
     @IBOutlet weak var pickerView: UIPickerView!
-    
     @IBOutlet weak var imageDeProfil: ImageArrondie!
-    
     @IBOutlet weak var ajouterEntrepise: UIButton!
-    
     @IBOutlet weak var prenomTextField: UITextField!
     @IBOutlet weak var nomTextField: UITextField!
     @IBOutlet weak var telTextField: UITextField!
     @IBOutlet weak var mailTextField: UITextField!
-   
-    
     @IBOutlet weak var ajouterPersonneBouton: BoutonArrondi!
-    
     @IBOutlet weak var largeurContrainte: NSLayoutConstraint!
     @IBOutlet weak var contrainteDuBas: NSLayoutConstraint!
     
@@ -40,12 +33,10 @@ class AjoutController: UIViewController {
         miseEnPlaceTextField()
         miseEnPlaceNotification()
         fectchEntreprises()
-      
     }
 
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
-        view.backgroundColor = .gray
         largeurContrainte.constant = view.frame.width
         scroll.contentSize = CGSize(width: largeurContrainte.constant, height: scroll.frame.height)
     }
@@ -62,10 +53,33 @@ class AjoutController: UIViewController {
             }
         }
     
-    
-    
-    
     @IBAction func ajouterPersonneAction(_ sender: Any) {
+        view.endEditing(true)
+        let nouvellePersonne = Personne(context: contexte)
+        
+        if prenomTextField.text != nil {
+            nouvellePersonne.prenom = prenomTextField.text!
+        }
+        
+        if nomTextField.text != nil {
+            nouvellePersonne.nom = nomTextField.text!
+        }
+        
+        if let numero = telTextField.text, let numeroInt = Int32(numero) {
+            nouvellePersonne.numero = numeroInt
+        }
+        if mailTextField.text != nil {
+            nouvellePersonne.mail = mailTextField.text!
+        }
+        
+        nouvellePersonne.photo = imageDeProfil.image
+        
+        nouvellePersonne.employeur = entreprises[pickerView.selectedRow(inComponent: 0)]
+        
+        appDelegate.saveContext()
+        
+        
+        
     }
 
     @IBAction func ajouterEntrepriseAction(_ sender: Any) {
@@ -88,9 +102,6 @@ class AjoutController: UIViewController {
         alerte.addAction(ajout)
         alerte.addAction(annuler)
         self.present(alerte, animated: true, completion: nil)
-        
-        
-        
     }
     
    

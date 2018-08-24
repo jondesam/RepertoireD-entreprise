@@ -2,8 +2,18 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Entreprise" representedClassName="Entreprise" syncable="YES" codeGenerationType="class">
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="employes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Personne" inverseName="employeur" inverseEntity="Personne" syncable="YES"/>
+    </entity>
+    <entity name="Personne" representedClassName="Personne" syncable="YES" codeGenerationType="class">
+        <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numero" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="employeur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entreprise" inverseName="employes" inverseEntity="Entreprise" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Entreprise" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="Entreprise" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Personne" positionX="135" positionY="-81" width="128" height="133"/>
     </elements>
 </model>

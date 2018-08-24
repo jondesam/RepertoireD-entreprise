@@ -11,8 +11,6 @@ import UIKit
 extension AjoutController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func miseEnPlaceImagePicker() {
-    
-        
         imagePicker = UIImagePickerController()
         imagePicker?.allowsEditing = true
         imagePicker?.delegate = self

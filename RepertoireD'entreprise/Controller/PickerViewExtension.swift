@@ -14,13 +14,15 @@ extension AjoutController: UIPickerViewDelegate, UIPickerViewDataSource {
         pickerView.dataSource = self
     }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return entreprises.count
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return entreprises.count
-    }
+   
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return entreprises[row].nom
@@ -28,7 +30,6 @@ extension AjoutController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let nomDeLentreprise = entreprises[row].nom ?? ""
-        
         print("Ligne choisie: " + nomDeLentreprise)
     }
     
